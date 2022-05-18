@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
+  m_Name: Whistle
+  m_EditorClassIdentifier: 
+  checkEncounters: 0
+  encounterReq: []
+  reactions:
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They happily listened along
+    traitsChange:
+      nasty_nice: 0.079
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 5
+    weight: -0.321
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They hummed along.
+    traitsChange:
+      nasty_nice: 0.123
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0.061
+    Val1:
+      inverseVal: 0
+      trait: 0
+    Val2:
+      inverseVal: 1
+      trait: 7
+    weight: 0.196
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They interrupted you with opera singing.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: -0.079
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 3
+    Val2:
+      inverseVal: 1
+      trait: 5
+    weight: -0.237
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They covered their ears.
+    traitsChange:
+      nasty_nice: -0.082
+      introv_extrov: 0.05
+      serious_funny: 0
+      headonic_asethetic: -0.152
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 1
+      trait: 0
+    weight: 0.161

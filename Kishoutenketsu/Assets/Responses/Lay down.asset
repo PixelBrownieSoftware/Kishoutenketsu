@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
+  m_Name: Lay down
+  m_EditorClassIdentifier: 
+  checkEncounters: 1
+  encounterReq:
+  - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
+  reactions:
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They lied down next to you.
+    traitsChange:
+      nasty_nice: 0.038
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0.038
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 0
+      trait: 3
+    weight: 0.34
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: You were given a weird look.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 0
+      trait: 7
+    Val2:
+      inverseVal: 1
+      trait: 3
+    weight: 0.514
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They laughed at you, then left with continued laughter.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: -0.129
+      headonic_asethetic: 0.099
+    Val1:
+      inverseVal: 0
+      trait: 0
+    Val2:
+      inverseVal: 1
+      trait: 2
+    weight: -0.441

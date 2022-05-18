@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
+  m_Name: Look
+  m_EditorClassIdentifier: 
+  reactions:
+  - responseDialogue: The other person cheerily waved at you.
+    traitsChange:
+      nasty_nice: 0.2
+      introv_extrov: 0.1
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 0
+      trait: 1
+    weight: -0.507
+  - responseDialogue: The other person ignored you.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 0
+    Val2:
+      inverseVal: 0
+      trait: 1
+    weight: 0.082
+  - responseDialogue: The other person did not seem to like that.
+    traitsChange:
+      nasty_nice: -0.12
+      introv_extrov: 0.09
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 0
+    Val2:
+      inverseVal: 1
+      trait: 1
+    weight: -0.12

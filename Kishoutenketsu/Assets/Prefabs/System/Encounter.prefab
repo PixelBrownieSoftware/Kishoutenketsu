@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &97477264775794997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 97477264775794954}
+  - component: {fileID: 97477264775794955}
+  m_Layer: 0
+  m_Name: Encounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &97477264775794954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97477264775794997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 329.05246, y: 192.37332, z: -1.4061688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &97477264775794955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97477264775794997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc6b68339413c74c85a3fe12058d791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEncounter: {fileID: 11400000, guid: 127fcedc4087ca54495d01826856f3a5, type: 2}
+  descriptionChannel: {fileID: 11400000, guid: d5780dbb8cb808849a29e9aaa5f8e216, type: 2}
+  dayDescChannel: {fileID: 11400000, guid: dd82191e56f688a4e872b69d2bec3dac, type: 2}
+  encounterChannel: {fileID: 11400000, guid: 0d80441c6d9e4334098dcd662190a710, type: 2}
+  descriptionEnabler: {fileID: 11400000, guid: 05678517faa026f4bb1c243a1b525b08, type: 2}
+  global: {fileID: 11400000, guid: 1958a485a6548d84d9a586175deed6d0, type: 2}
+  m_FadeChannel: {fileID: 11400000, guid: 4a3f8efc42a98b54da0dd53f5fb39882, type: 2}
+  nextSceneButton: {fileID: 0}
+  loadEndingEvent: {fileID: 11400000, guid: 3adc597ed0ce5704192c3d57c28dc382, type: 2}
+  sceneloadEvent: {fileID: 11400000, guid: ff86d73975cbba14ca8b7a5b8a4ba73f, type: 2}
+  encounterLoadEvent: {fileID: 11400000, guid: 97ec5e446a0250f4f9bb790d377e8969, type: 2}
+  optionEvent: {fileID: 11400000, guid: 3a8b564cd0780c74d8adff7959b93931, type: 2}
+  currentDay: 0
+  game_length: 0

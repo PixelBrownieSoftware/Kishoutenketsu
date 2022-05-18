@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806ae2969e3f79b468fbd80d71d58fe0, type: 3}
+  m_Name: Town
+  m_EditorClassIdentifier: 
+  sceneName: 
+  minConditions:
+    nasty_nice: 0
+    introv_extrov: 0
+    serious_funny: 0
+    headonic_asethetic: 0
+  maxConditions:
+    nasty_nice: 0
+    introv_extrov: 0
+    serious_funny: 0
+    headonic_asethetic: 0
+  pMinConditions:
+    nasty_nice: 0
+    introv_extrov: 0
+    serious_funny: 0
+    headonic_asethetic: 0
+  pMaxConditions:
+    nasty_nice: 0
+    introv_extrov: 0
+    serious_funny: 0
+    headonic_asethetic: 0
+  useNN: 0
+  useHA: 0
+  useIE: 0
+  useSF: 0
+  usePNN: 0
+  usePHA: 0
+  usePIE: 0
+  usePSF: 0
+  description: You see (AN) doing something in the town, what will you do?

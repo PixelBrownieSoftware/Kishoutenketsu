@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
+  m_Name: Discuss philosophy
+  m_EditorClassIdentifier: 
+  checkEncounters: 0
+  encounterReq: []
+  reactions:
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They seem to take an interest in your ideas.
+    traitsChange:
+      nasty_nice: 0.122
+      introv_extrov: -0.096
+      serious_funny: -0.13
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: -0.238
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They couldn't understand what you were saying.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: -0.152
+      serious_funny: -0.088
+      headonic_asethetic: 0.056
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 1
+      trait: 4
+    weight: -0.65
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: They did not want to listen to your ideas.
+    traitsChange:
+      nasty_nice: -0.106
+      introv_extrov: -0.048
+      serious_funny: -0.072
+      headonic_asethetic: 0.142
+    Val1:
+      inverseVal: 1
+      trait: 0
+    Val2:
+      inverseVal: 1
+      trait: 6
+    weight: -0.298
