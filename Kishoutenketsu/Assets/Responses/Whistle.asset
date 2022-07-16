@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
   m_Name: Whistle
   m_EditorClassIdentifier: 
-  checkEncounters: 0
+  qualify_disqualify: 1
   encounterReq: []
-  reactions:
+  reactionsList:
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They happily listened along
+    qualify_disqualify: 1
+    responseDialogue: <AN> happily listened along
     traitsChange:
       nasty_nice: 0.079
       introv_extrov: 0
@@ -30,9 +30,10 @@ MonoBehaviour:
       inverseVal: 0
       trait: 5
     weight: -0.321
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They hummed along.
+    qualify_disqualify: 1
+    responseDialogue: <AN> hummed along.
     traitsChange:
       nasty_nice: 0.123
       introv_extrov: 0
@@ -45,9 +46,10 @@ MonoBehaviour:
       inverseVal: 1
       trait: 7
     weight: 0.196
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They interrupted you with opera singing.
+    qualify_disqualify: 1
+    responseDialogue: <AN> interrupted you with opera singing.
     traitsChange:
       nasty_nice: 0
       introv_extrov: -0.079
@@ -58,11 +60,13 @@ MonoBehaviour:
       trait: 3
     Val2:
       inverseVal: 1
-      trait: 5
-    weight: -0.237
+      trait: 0
+    weight: -0.405
+    interests:
+    - {fileID: 11400000, guid: c8e0dd2784587ab44b2bba67b169b539, type: 2}
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They covered their ears.
+    qualify_disqualify: 1
+    responseDialogue: <AN> covered <APrP> ears.
     traitsChange:
       nasty_nice: -0.082
       introv_extrov: 0.05
@@ -75,3 +79,36 @@ MonoBehaviour:
       inverseVal: 1
       trait: 0
     weight: 0.161
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> didn't seem to take notice.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 1
+      trait: 0
+    weight: -0.252
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> interrupted your whilsting with a song of <APrP> own.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: -0.083
+      serious_funny: 0.058
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 0
+      trait: 1
+    Val2:
+      inverseVal: 1
+      trait: 3
+    weight: -0.311
+    interests: []

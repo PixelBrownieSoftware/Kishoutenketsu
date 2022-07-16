@@ -25,3 +25,8 @@ MonoBehaviour:
       serious_funny: 0
       headonic_asethetic: 0
   male_female: 0
+  characterSprite: {fileID: 685652748, guid: 8f05e04854148ba4881a8b4822beb7bc, type: 3}
+  interests:
+  - {fileID: 11400000, guid: a134ca349ea532543a2192c55c873c38, type: 2}
+  - {fileID: 11400000, guid: fd55b36e05160f74d8cf216c28e8da96, type: 2}
+  - {fileID: 11400000, guid: 43e41946073a1234d822fed491d8299b, type: 2}

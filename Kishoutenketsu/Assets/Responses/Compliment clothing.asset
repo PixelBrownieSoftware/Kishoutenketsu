@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
+  m_Name: Compliment clothing
+  m_EditorClassIdentifier: 
+  qualify_disqualify: 1
+  encounterReq: []
+  reactionsList:
+  - encounterReq:
+    - {fileID: 11400000, guid: 676b96025e7208f48a2a72d848eec167, type: 2}
+    qualify_disqualify: 1
+    responseDialogue: <AN> smiled with glee at your compliment, <APr2> liked your
+      appreciation of <APrP> clothing.
+    traitsChange:
+      nasty_nice: 0.201
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0.246
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 0
+      trait: 1
+    weight: -0.455
+    interests:
+    - {fileID: 11400000, guid: 97c76b3eb4909804299afc7b64fdf148, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> gave you the cold shoulder.
+    traitsChange:
+      nasty_nice: -0.06
+      introv_extrov: 0.068
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 1
+      trait: 4
+    weight: -0.615
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> gave you a modest thanks.
+    traitsChange:
+      nasty_nice: 0.1
+      introv_extrov: 0.041
+      serious_funny: 0
+      headonic_asethetic: 0.049
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: -0.416
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> smiled at you.
+    traitsChange:
+      nasty_nice: 0.168
+      introv_extrov: 0.039
+      serious_funny: 0
+      headonic_asethetic: 0.103
+    Val1:
+      inverseVal: 0
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: -0.31
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> did not know what to say.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: 0
+    interests: []

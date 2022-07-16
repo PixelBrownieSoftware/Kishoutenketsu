@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
   m_Name: Ask what they are doing
   m_EditorClassIdentifier: 
-  checkEncounters: 0
+  qualify_disqualify: 1
   encounterReq: []
-  reactions:
+  reactionsList:
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They told you that they were looking around.
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> was looking around.
     traitsChange:
       nasty_nice: 0.029
       introv_extrov: 0
@@ -30,10 +30,11 @@ MonoBehaviour:
       inverseVal: 0
       trait: 4
     weight: 0.216
+    interests: []
   - encounterReq:
     - {fileID: 11400000, guid: a08012da3637c8d43aa42f74869241bb, type: 2}
-    requireEncounter: 1
-    responseDialogue: They told you that they were checking clothing shop windows.
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> was checking clothing shop windows.
     traitsChange:
       nasty_nice: 0.053
       introv_extrov: 0.029
@@ -46,10 +47,12 @@ MonoBehaviour:
       inverseVal: 1
       trait: 7
     weight: 0.356
+    interests:
+    - {fileID: 11400000, guid: 97c76b3eb4909804299afc7b64fdf148, type: 2}
   - encounterReq:
     - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
-    requireEncounter: 1
-    responseDialogue: They told you that they were chatting with some other people.
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> was chatting with some other people.
     traitsChange:
       nasty_nice: 0.026
       introv_extrov: 0.05
@@ -61,10 +64,11 @@ MonoBehaviour:
     Val2:
       inverseVal: 1
       trait: 4
-    weight: 0.193
+    weight: 0.253
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They didn't seem to trust you, so they walked away.
+    qualify_disqualify: 1
+    responseDialogue: <AN> didn't seem to trust you, so <APr2> walked away.
     traitsChange:
       nasty_nice: -0.029
       introv_extrov: 0.05
@@ -77,3 +81,139 @@ MonoBehaviour:
       inverseVal: 1
       trait: 4
     weight: 0.374
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you their entire story about all the shops <APr2>
+      went into.
+    traitsChange:
+      nasty_nice: 0.112
+      introv_extrov: 0.05
+      serious_funny: 0
+      headonic_asethetic: -0.089
+    Val1:
+      inverseVal: 0
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 4
+    weight: -0.379
+    interests:
+    - {fileID: 11400000, guid: 97c76b3eb4909804299afc7b64fdf148, type: 2}
+  - encounterReq:
+    - {fileID: 11400000, guid: 6fe4bd876d720644f96573c6ffdd5421, type: 2}
+    - {fileID: 11400000, guid: 4d746cf8ccddfe042ba19f3d11902cd2, type: 2}
+    - {fileID: 11400000, guid: d34fe07a2c615674fb016617ba8e1e36, type: 2}
+    - {fileID: 11400000, guid: 6ef383cb58911ee41bc6e115e2f24c95, type: 2}
+    - {fileID: 11400000, guid: dea286af62a22fe46b824633038e877b, type: 2}
+    - {fileID: 11400000, guid: a7ab0c03e611da946867a88deed6df42, type: 2}
+    - {fileID: 11400000, guid: a08012da3637c8d43aa42f74869241bb, type: 2}
+    - {fileID: 11400000, guid: 97c4b8aeebc5dee448f245c00641dc7a, type: 2}
+    - {fileID: 11400000, guid: dd91546fe7a03044a8a903da38c9b6b6, type: 2}
+    - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
+    - {fileID: 11400000, guid: ce80cb97254a1894ead84b4151d8f550, type: 2}
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> was working on a book.
+    traitsChange:
+      nasty_nice: -0.029
+      introv_extrov: 0.05
+      serious_funny: 0
+      headonic_asethetic: -0.089
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 1
+      trait: 1
+    weight: -0.249
+    interests:
+    - {fileID: 11400000, guid: a0fa5face54d76b43924f09de3c76e3f, type: 2}
+    - {fileID: 11400000, guid: 14834c90f89b5ec4d86f4116bd3d9cb2, type: 2}
+  - encounterReq:
+    - {fileID: 11400000, guid: ce80cb97254a1894ead84b4151d8f550, type: 2}
+    - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> did a couple of push-ups.
+    traitsChange:
+      nasty_nice: -0.029
+      introv_extrov: 0.05
+      serious_funny: 0
+      headonic_asethetic: -0.089
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 1
+      trait: 2
+    weight: 0.374
+    interests:
+    - {fileID: 11400000, guid: 95dbfab43c41bd74087a269999a9c52e, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> rode on a train.
+    traitsChange:
+      nasty_nice: 0.084
+      introv_extrov: 0.052
+      serious_funny: 0
+      headonic_asethetic: 0.048
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: -0.281
+    interests:
+    - {fileID: 11400000, guid: a134ca349ea532543a2192c55c873c38, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> was cooking a nice meal.
+    traitsChange:
+      nasty_nice: 0.216
+      introv_extrov: 0.08
+      serious_funny: 0
+      headonic_asethetic: 0.176
+    Val1:
+      inverseVal: 0
+      trait: 7
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: -0.313
+    interests:
+    - {fileID: 11400000, guid: 43e41946073a1234d822fed491d8299b, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> was cooking a nice strawberry pie.
+    traitsChange:
+      nasty_nice: 0.24
+      introv_extrov: 0.052
+      serious_funny: 0
+      headonic_asethetic: 0.257
+    Val1:
+      inverseVal: 0
+      trait: 7
+    Val2:
+      inverseVal: 0
+      trait: 4
+    weight: -0.553
+    interests:
+    - {fileID: 11400000, guid: 43e41946073a1234d822fed491d8299b, type: 2}
+    - {fileID: 11400000, guid: 2cbcc47225f8f664f9927f732edd99b0, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you that <APr2> ate strawberries.
+    traitsChange:
+      nasty_nice: 0.148
+      introv_extrov: 0.076
+      serious_funny: 0
+      headonic_asethetic: 0.056
+    Val1:
+      inverseVal: 0
+      trait: 5
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: -0.357
+    interests:
+    - {fileID: 11400000, guid: 2cbcc47225f8f664f9927f732edd99b0, type: 2}

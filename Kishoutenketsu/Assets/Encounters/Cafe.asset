@@ -41,5 +41,7 @@ MonoBehaviour:
   usePHA: 0
   usePIE: 0
   usePSF: 0
-  description: You sit at the cafe. Suddenly, you see (AN) sit opposite of you. What
+  description: You sit at the cafe. Suddenly, you see <AN> sit opposite of you. What
     do you do?
+  background: {fileID: 21300000, guid: 78cde1c1d61491e40b73ddee691b3db2, type: 3}
+  interestReq: []

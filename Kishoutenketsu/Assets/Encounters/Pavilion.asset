@@ -41,5 +41,7 @@ MonoBehaviour:
   usePHA: 0
   usePIE: 0
   usePSF: 0
-  description: You were invited to the pavilion by (AN). You saw (AnPr2) there too,
-    they see you and wave. What do you do?
+  description: "You were invited to the pavilion by <AN>. You saw <AnPr2> there too,
+    they see you and wave. \nWhat do you do?"
+  background: {fileID: 21300000, guid: 6b43ba866a5118a4e9e2a8c24b231937, type: 3}
+  interestReq: []

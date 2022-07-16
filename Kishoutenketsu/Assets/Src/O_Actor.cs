@@ -8,6 +8,8 @@ public class O_Actor : ScriptableObject
     public V_Traits traits;
     public List<pO_Actor> perceivedOpinions = new List<pO_Actor>();
     public bool male_female;    //Sex is female if true
+    public Sprite characterSprite;
+    public List<O_Interest> interests = new List<O_Interest>();
 
     private void OnDisable()
     {

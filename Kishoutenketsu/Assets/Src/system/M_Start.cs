@@ -18,6 +18,8 @@ public class M_Start : MonoBehaviour
     [Header("On scene load listener")]
     public CH_Func loadListener;
 
+    public R_Int daysNum;
+
     private void OnEnable()
     {
         loadListener.OnFunctionEvent += DisableGame;
@@ -34,7 +36,8 @@ public class M_Start : MonoBehaviour
         loadListener.OnFunctionEvent -= DisableGame;
     }
 
-    public void StartGame() {
+    public void StartGame(int daysNum) {
+        this.daysNum.integer = daysNum;
         m_startChannel.OnMapTransferEvent.Invoke(m_locationToLoad);
     }
 }

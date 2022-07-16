@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rebecca
   m_EditorClassIdentifier: 
   traits:
-    nasty_nice: -0.21
+    nasty_nice: -0.15
     introv_extrov: 0.36
     serious_funny: 0.69
     headonic_asethetic: -0.51
@@ -25,3 +25,7 @@ MonoBehaviour:
       serious_funny: 0
       headonic_asethetic: 0
   male_female: 1
+  characterSprite: {fileID: 1594440174, guid: 8f05e04854148ba4881a8b4822beb7bc, type: 3}
+  interests:
+  - {fileID: 11400000, guid: 97c76b3eb4909804299afc7b64fdf148, type: 2}
+  - {fileID: 11400000, guid: fd55b36e05160f74d8cf216c28e8da96, type: 2}

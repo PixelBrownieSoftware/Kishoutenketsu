@@ -41,12 +41,6 @@ MonoBehaviour:
   usePHA: 0
   usePIE: 0
   usePSF: 0
-  description: You see (AN) at the park ,(APr2) is seen chilling on the bench. What
+  description: You see <AN> at the park, <APr2> is seen chilling on the bench. What
     do you do?
-  options:
-  - name: Lay down on the grass.
-    responses: {fileID: 11400000, guid: 606dcee8ffe885a4f823b73cc5ce84d0, type: 2}
-  - name: Do a little dance.
-    responses: {fileID: 11400000, guid: 8d85ff9b4f048514e8934dd48ac68b25, type: 2}
-  - name: Ignore them.
-    responses: {fileID: 11400000, guid: 2e7807e531b3d92478f428fca8d54adf, type: 2}
+  background: {fileID: 21300000, guid: 133ea869ce3d9e348bd77bc9f2118709, type: 3}

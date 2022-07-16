@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
   m_Name: Ignore
   m_EditorClassIdentifier: 
-  checkEncounters: 0
+  qualify_disqualify: 0
   encounterReq: []
-  reactions:
+  reactionsList:
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: The other person looked dissapointed.
+    qualify_disqualify: 1
+    responseDialogue: <AN> looked dissapointed.
     traitsChange:
       nasty_nice: -0.12
       introv_extrov: -0.18
@@ -30,13 +30,14 @@ MonoBehaviour:
       inverseVal: 0
       trait: 5
     weight: 0.24
+    interests: []
   - encounterReq:
     - {fileID: 11400000, guid: cfe54811c8acd9a4cbb3d0c71ef679cf, type: 2}
     - {fileID: 11400000, guid: 97c4b8aeebc5dee448f245c00641dc7a, type: 2}
     - {fileID: 11400000, guid: cfe54811c8acd9a4cbb3d0c71ef679cf, type: 2}
     - {fileID: 11400000, guid: a08012da3637c8d43aa42f74869241bb, type: 2}
-    requireEncounter: 1
-    responseDialogue: The other person did not notice you.
+    qualify_disqualify: 1
+    responseDialogue: <AN> did not notice you.
     traitsChange:
       nasty_nice: 0
       introv_extrov: 0
@@ -49,13 +50,14 @@ MonoBehaviour:
       inverseVal: 1
       trait: 5
     weight: -0.63
+    interests: []
   - encounterReq:
     - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
     - {fileID: 11400000, guid: cfe54811c8acd9a4cbb3d0c71ef679cf, type: 2}
     - {fileID: 11400000, guid: 97c4b8aeebc5dee448f245c00641dc7a, type: 2}
     - {fileID: 11400000, guid: a08012da3637c8d43aa42f74869241bb, type: 2}
-    requireEncounter: 1
-    responseDialogue: The other person tried to call to you.
+    qualify_disqualify: 1
+    responseDialogue: <AN> tried to call to for you.
     traitsChange:
       nasty_nice: 0
       introv_extrov: -0.18
@@ -68,3 +70,40 @@ MonoBehaviour:
       inverseVal: 1
       trait: 5
     weight: -0.73
+    interests: []
+  - encounterReq:
+    - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
+    - {fileID: 11400000, guid: cfe54811c8acd9a4cbb3d0c71ef679cf, type: 2}
+    - {fileID: 11400000, guid: 97c4b8aeebc5dee448f245c00641dc7a, type: 2}
+    - {fileID: 11400000, guid: a08012da3637c8d43aa42f74869241bb, type: 2}
+    qualify_disqualify: 1
+    responseDialogue: <AN> was relieved.
+    traitsChange:
+      nasty_nice: 0.008
+      introv_extrov: -0.072
+      serious_funny: 0
+      headonic_asethetic: 0.064
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 1
+      trait: 4
+    weight: 0.501
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> coninued doing what <APr2> were doing.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 0
+      trait: 0
+    Val2:
+      inverseVal: 0
+      trait: 4
+    weight: 0
+    interests: []

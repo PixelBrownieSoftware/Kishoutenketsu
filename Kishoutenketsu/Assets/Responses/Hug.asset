@@ -12,16 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
   m_Name: Hug
   m_EditorClassIdentifier: 
-  checkEncounters: 1
+  qualify_disqualify: 1
   encounterReq:
-  - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
   - {fileID: 11400000, guid: cfe54811c8acd9a4cbb3d0c71ef679cf, type: 2}
+  - {fileID: 11400000, guid: 8eed049c5b88cfc4e88ee5e92b1f92fe, type: 2}
+  - {fileID: 11400000, guid: ce80cb97254a1894ead84b4151d8f550, type: 2}
+  - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
+  - {fileID: 11400000, guid: dd91546fe7a03044a8a903da38c9b6b6, type: 2}
+  - {fileID: 11400000, guid: caddd8c71c85dee4c97700e3e46c8b5a, type: 2}
   - {fileID: 11400000, guid: 97c4b8aeebc5dee448f245c00641dc7a, type: 2}
   - {fileID: 11400000, guid: a08012da3637c8d43aa42f74869241bb, type: 2}
-  reactions:
+  - {fileID: 11400000, guid: 6ef383cb58911ee41bc6e115e2f24c95, type: 2}
+  reactionsList:
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: (AN) hugged you back.
+    qualify_disqualify: 1
+    responseDialogue: <AN> hugged you back.
     traitsChange:
       nasty_nice: 0.096
       introv_extrov: 0.044
@@ -33,14 +38,15 @@ MonoBehaviour:
     Val2:
       inverseVal: 0
       trait: 4
-    weight: 0.334
+    weight: 0.466
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: (AN) pushed you away.
+    qualify_disqualify: 1
+    responseDialogue: <AN> pushed you away.
     traitsChange:
       nasty_nice: -0.158
       introv_extrov: 0.054
-      serious_funny: 0
+      serious_funny: -0.032
       headonic_asethetic: -0.192
     Val1:
       inverseVal: 1
@@ -48,10 +54,11 @@ MonoBehaviour:
     Val2:
       inverseVal: 1
       trait: 0
-    weight: -0.338
+    weight: 0.42
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: (AN) awkwardly stood there whilst you hugged them.
+    qualify_disqualify: 1
+    responseDialogue: <AN> awkwardly stood there whilst you hugged <APr1> .
     traitsChange:
       nasty_nice: -0.026
       introv_extrov: 0.074
@@ -64,10 +71,11 @@ MonoBehaviour:
       inverseVal: 0
       trait: 4
     weight: -0.418
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: (AN) squeezed you passionately as if they wanted to show their
-      strength.
+    qualify_disqualify: 1
+    responseDialogue: <AN> squeezed you passionately as if <APr2> wanted to show
+      their strength.
     traitsChange:
       nasty_nice: 0.066
       introv_extrov: 0
@@ -79,4 +87,58 @@ MonoBehaviour:
     Val2:
       inverseVal: 0
       trait: 4
-    weight: -0.308
+    weight: 0.665
+    interests:
+    - {fileID: 11400000, guid: 95dbfab43c41bd74087a269999a9c52e, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> dodged your hug.
+    traitsChange:
+      nasty_nice: -0.215
+      introv_extrov: 0.024
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 2
+    Val2:
+      inverseVal: 1
+      trait: 4
+    weight: 0.341
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> giggled whilst you hugged <APr1> .
+    traitsChange:
+      nasty_nice: 0.198
+      introv_extrov: 0.032
+      serious_funny: 0.088
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 0
+      trait: 2
+    Val2:
+      inverseVal: 0
+      trait: 6
+    weight: -0.401
+    interests: []
+  - encounterReq:
+    - {fileID: 11400000, guid: 6fe4bd876d720644f96573c6ffdd5421, type: 2}
+    - {fileID: 11400000, guid: d34fe07a2c615674fb016617ba8e1e36, type: 2}
+    - {fileID: 11400000, guid: 4d746cf8ccddfe042ba19f3d11902cd2, type: 2}
+    qualify_disqualify: 0
+    responseDialogue: <AN> used the hug as an opportunity to dance with you.
+    traitsChange:
+      nasty_nice: 0.184
+      introv_extrov: 0.063
+      serious_funny: 0
+      headonic_asethetic: 0.097
+    Val1:
+      inverseVal: 0
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 4
+    weight: -0.48
+    interests:
+    - {fileID: 11400000, guid: fd55b36e05160f74d8cf216c28e8da96, type: 2}

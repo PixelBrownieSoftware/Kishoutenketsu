@@ -1,11 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class M_EndingCharacterDesc : MonoBehaviour
 {
     public Text text;
+    public TextMeshProUGUI tmpTxt;
     public O_Actor character;
     public CH_Func OnSceneLoad;
 
@@ -19,7 +22,9 @@ public class M_EndingCharacterDesc : MonoBehaviour
         OnSceneLoad.OnFunctionEvent -= ShowThoughts;
     }
 
+
     public void ShowThoughts() {
+        string finText = "";
         V_Traits traits = character.perceivedOpinions[0].pTraits;
 
         string begining = character.name + " thinks that you are ";
@@ -30,6 +35,7 @@ public class M_EndingCharacterDesc : MonoBehaviour
             string adjective = "";
 
             string trait = "";
+
 
             if (value > 0)
             {
@@ -78,34 +84,51 @@ public class M_EndingCharacterDesc : MonoBehaviour
         string nasty_nice = TraitToString(traits.nasty_nice, "nice", "nasty");
         string introv_extrov = TraitToString(traits.introv_extrov, "extroverted", "introverted");
         string serious_funny = TraitToString(traits.serious_funny, "funny", "serious");
-        string headonic_asethetic = TraitToString(traits.headonic_asethetic, "asethetic", "headonistic");
+        string headonic_asethetic = TraitToString(traits.headonic_asethetic, "ascetic", "headonistic");
 
-        if (nasty_nice == "" &&
-            introv_extrov == "" &&
-            serious_funny == "" &&
-            headonic_asethetic == "")
+        List<string> opinions = new List<string>();
+        
+        if (nasty_nice != "") {
+            opinions.Add(nasty_nice);
+        }
+        if (introv_extrov != "")
         {
-            text.text = character.name + " has no notable opinion of you.";
+            opinions.Add(introv_extrov);
+        }
+        if (serious_funny != "")
+        {
+            opinions.Add(serious_funny);
+        }
+        if (headonic_asethetic != "")
+        {
+            opinions.Add(headonic_asethetic);
+        }
+        
+        if (opinions.Count == 0)
+        {
+            finText = character.name + " has no notable opinion of you.";
         }
         else {
-            text.text = begining;
-            if (nasty_nice != "") {
-                text.text += nasty_nice;
-            }
-            if (introv_extrov != "")
+            finText = begining;
+            int index = 0;
+            foreach (var txt in opinions)
             {
-                text.text += ", " + introv_extrov;
+                index++;
+                if (opinions.Count == 1 || index == 1)
+                {
+                    finText += txt;
+                }
+                else if (index == opinions.Count)
+                {
+                    finText += " and " + txt;
+                }
+                else
+                {
+                    finText += ", " + txt;
+                }
             }
-            if (serious_funny != "")
-            {
-                text.text += ", " + serious_funny;
-            }
-            if (headonic_asethetic != "")
-            {
-                text.text += ", " + headonic_asethetic;
-            }
-            text.text += ".";
+            finText += ".";
         }
-
+        tmpTxt.text = finText;
     }
 }

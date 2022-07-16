@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public enum GAME_LENGTH
-{
-    SHORT,
-    MEDIUM,
-    LONG
-}
 
 public class S_EncounterManager : MonoBehaviour
 {
@@ -21,26 +15,50 @@ public class S_EncounterManager : MonoBehaviour
     public CH_Fade m_FadeChannel;
     public Button nextSceneButton;
 
+    public CH_Sprite BGSpriteChannel;
+    public CH_Sprite CHSpriteChannel;
+
     public CH_MapTransfer loadEndingEvent;
     public CH_Func sceneloadEvent;
     public CH_Func encounterLoadEvent;
 
     public CH_Response optionEvent;
     public int currentDay;
-    public GAME_LENGTH game_length;
+    public R_Int dayLength;
 
     public void OptionSelect(O_Response eventOption) {
-        
-
         print(eventOption.name);
         float hInclinationValue = float.MinValue;
         O_Response.O_Reactions appropriateReaction = new O_Response.O_Reactions();
-        foreach (var reaction in eventOption.reactions)
+        foreach (var reaction in eventOption.reactionsList)
         {
-            if (reaction.requireEncounter) {
-                if (!reaction.encounterReq.Contains(currentEncounter)) {
-                    continue;
+            if (reaction.encounterReq.Count > 0) {
+                if (reaction.qualify_disqualify)
+                {
+                    if (!reaction.encounterReq.Contains(currentEncounter))
+                    {
+                        continue;
+                    }
                 }
+                else
+                {
+                    if (reaction.encounterReq.Contains(currentEncounter))
+                    {
+                        continue;
+                    }
+                }
+            }
+
+            if (reaction.interests.Count > 0) {
+                bool gotcha = false;
+                foreach (var interest in reaction.interests) {
+                    if (!global.currentActor.interests.Contains(interest)) {
+                        gotcha = true;
+                        break;
+                    }
+                }
+                if (gotcha)
+                    continue;
             }
 
             float var1 = 0;
@@ -94,7 +112,7 @@ public class S_EncounterManager : MonoBehaviour
         }
         print(appropriateReaction.responseDialogue);
         global.currentActor.pTraitsAdd(appropriateReaction.traitsChange);
-        descriptionChannel.RaiseEvent(appropriateReaction.responseDialogue);
+        descriptionChannel.RaiseEvent(ParseDialogue(appropriateReaction.responseDialogue));
         nextSceneButton.gameObject.SetActive(true);
     }
 
@@ -104,16 +122,10 @@ public class S_EncounterManager : MonoBehaviour
         m_FadeChannel.Fade(Color.black);
         yield return new WaitForSeconds(0.75f);
         currentDay++;
-        int dayLength = 0;
-        switch (game_length) {
-            default:
-                dayLength = 28;
-                break;
-        }
-        if (currentDay < dayLength)
+        if (currentDay < dayLength.integer)
         {
             LoadEncounter(global.SetEncounters());
-            dayDescChannel.RaiseEvent("Day " + currentDay);
+            dayDescChannel.RaiseEvent("Day " + currentDay + "/" + dayLength.integer);
             yield return new WaitForSeconds(0.35f);
             m_FadeChannel.Fade(Color.clear);
         }
@@ -123,42 +135,109 @@ public class S_EncounterManager : MonoBehaviour
     }
 
     public void InitilizeEncounter() {
+        global.Initialise();
+        global.SetRandomActor();
         StartCoroutine(LoadEncounter());
     }
 
     public void NextEncounter()
     {
+        global.SetRandomActor();
         StartCoroutine(LoadEncounter());
+    }
+
+    public string ParseDialogue(string modText)
+    {
+        string[] words = modText.Split(' ');
+
+        string pronoun = "";
+        string pronoun2 = "";
+        string pronounPosses = "";
+
+        string modStr = "";
+        string lastWord = " ";
+        foreach (string word in words)
+        {
+            if (lastWord != "")
+            {
+                if (global.currentActor.male_female)
+                {
+                    if (lastWord[lastWord.Length - 1] == '.')
+                    {
+                        pronoun = "Her";
+                        pronoun2 = "She";
+                        pronounPosses = "Her";
+                    }
+                    else
+                    {
+                        pronoun = "her";
+                        pronoun2 = "she";
+                        pronounPosses = "her";
+                    }
+                }
+                else
+                {
+                    if (lastWord[lastWord.Length - 1] == '.')
+                    {
+                        pronoun = "Him";
+                        pronoun2 = "He";
+                        pronounPosses = "His";
+                    }
+                    else
+                    {
+                        pronoun = "him";
+                        pronoun2 = "he";
+                        pronounPosses = "his";
+                    }
+                }
+            }
+
+            string wordCheck = word;
+            if (wordCheck.Contains('.'))
+            {
+                switch (wordCheck)
+                {
+                    case "<AN>":
+                    case "<APrP>":
+                    case "<APr1>":
+                    case "<APr2>":
+                        wordCheck = word.Remove('.');
+                        break;
+                }
+
+            }
+            switch (wordCheck)
+            {
+                case "<AN>":
+                    modStr += global.currentActor.name;
+                    break;
+                case "<APrP>":
+                    modStr += pronounPosses;
+                    break;
+                case "<APr1>":
+                    modStr += pronoun;
+                    break;
+                case "<APr2>":
+                    modStr += pronoun2;
+                    break;
+                default:
+                    modStr += word;
+                    break;
+            }
+            modStr += " ";
+            lastWord = word;
+        }
+        return modStr;
     }
 
     public void LoadEncounter(O_Encounter encounter)
     {
         currentEncounter = encounter;
-        global.SetRandomActor();
-
-        string modText = currentEncounter.description;
-        string pronoun = "";
-        string pronoun2 = "";
-        string pronounPosses = "";
-        if (global.currentActor.male_female)
-        {
-            pronoun = "her";
-            pronoun2 = "she";
-            pronounPosses = "her";
-        }
-        else {
-            pronoun = "him";
-            pronoun2 = "he";
-            pronounPosses = "his";
-        }
-
-        modText = modText.Replace("(APrP)", pronounPosses);
-        modText = modText.Replace("(APr1)", pronoun);
-        modText = modText.Replace("(APr2)", pronoun2);
-        modText = modText.Replace("(AN)", global.currentActor.name);
-
+        
         descriptionEnabler.RaiseEvent(true);
-        descriptionChannel.RaiseEvent(modText);
+        descriptionChannel.RaiseEvent(ParseDialogue(currentEncounter.description));
+        BGSpriteChannel.RaiseEvent(encounter.background);
+        CHSpriteChannel.RaiseEvent(global.currentActor.characterSprite);
         encounterChannel.RaiseEvent(currentEncounter);
     }
 

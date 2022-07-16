@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class S_EncounterListener : MonoBehaviour
 {
@@ -51,10 +52,13 @@ public class S_EncounterListener : MonoBehaviour
 
     public void OnEncounterLoad(O_Encounter _encounter) {
         int index = 0;
-        List<O_Response> respAvailable = global.responses.FindAll(x => x.checkEncounters && x.encounterReq.Contains(_encounter) || !x.checkEncounters);
+        List<O_Response> respAvailable = global.responses.FindAll(
+            x => x.qualify_disqualify && (x.encounterReq.Count > 0 && x.encounterReq.Contains(_encounter)) || x.encounterReq.Count == 0 
+            || !x.qualify_disqualify && (x.encounterReq.Count > 0 && !x.encounterReq.Contains(_encounter))
+            );
         List<O_Response> respOptions = new List<O_Response>();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 4; i++) {
             O_Response option = respAvailable[Random.Range(0, respAvailable.Count)];
             respOptions.Add(option);
             respAvailable.Remove(option);
@@ -67,7 +71,7 @@ public class S_EncounterListener : MonoBehaviour
             {
                 button.gameObject.SetActive(true);
                 optionButtons[index].resp = respOptions[index];
-                button.gameObject.transform.GetChild(0).GetComponent<Text>().text = respOptions[index].name;
+                button.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = respOptions[index].name;
             }
             index++;
         }

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c1ef6e957075d4ebdddecbb44122fe, type: 3}
+  m_Name: Rosaline
+  m_EditorClassIdentifier: 
+  traits:
+    nasty_nice: -0.37
+    introv_extrov: -0.02
+    serious_funny: -0.1
+    headonic_asethetic: -0.83
+  perceivedOpinions:
+  - target: {fileID: 11400000, guid: fb573979718bfc9478b876b1d800e861, type: 2}
+    pTraits:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+  male_female: 1
+  characterSprite: {fileID: 1451780236, guid: 8f05e04854148ba4881a8b4822beb7bc, type: 3}
+  interests:
+  - {fileID: 11400000, guid: a0fa5face54d76b43924f09de3c76e3f, type: 2}
+  - {fileID: 11400000, guid: 97c76b3eb4909804299afc7b64fdf148, type: 2}
+  - {fileID: 11400000, guid: c8e0dd2784587ab44b2bba67b169b539, type: 2}
+  - {fileID: 11400000, guid: fd55b36e05160f74d8cf216c28e8da96, type: 2}

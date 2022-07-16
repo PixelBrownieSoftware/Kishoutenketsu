@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Src\system\S_FadeController.cs" />
     <Compile Include="Assets\Src\system\ChannelListeners\S_BooleanObjectListener.cs" />
+    <Compile Include="Assets\Src\system\ChannelListeners\S_SpriteListener.cs" />
     <Compile Include="Assets\Src\system\Encounter\S_EncounterManager.cs" />
     <Compile Include="Assets\Src\O_Response.cs" />
     <Compile Include="Assets\Src\system\ChannelListeners\S_EventListener.cs" />
@@ -72,17 +73,44 @@
     <Compile Include="Assets\Src\system\Channels\CH_Encounter.cs" />
     <Compile Include="Assets\Src\O_Actor.cs" />
     <Compile Include="Assets\Src\misc\S_Initilize.cs" />
+    <Compile Include="Assets\Src\system\Channels\CH_Sprite.cs" />
     <Compile Include="Assets\Src\system\Channels\CH_Int.cs" />
     <Compile Include="Assets\Src\system\S_SceneLoader.cs" />
     <Compile Include="Assets\Src\system\S_Transition.cs" />
+    <Compile Include="Assets\Src\O_Interest.cs" />
     <Compile Include="Assets\Src\system\S_TextEventListener.cs" />
     <Compile Include="Assets\Src\system\M_Start.cs" />
     <Compile Include="Assets\Src\system\Channels\CH_Boolean.cs" />
     <Compile Include="Assets\Src\system\Channels\CH_Text.cs" />
+    <Compile Include="Assets\Src\misc\s_intro.cs" />
     <Compile Include="Assets\Src\system\Channels\CH_Func.cs" />
     <Compile Include="Assets\Src\system\ChannelListeners\S_IntegerListener.cs" />
     <Compile Include="Assets\Src\system\Channels\CH_MapTransfer.cs" />
     <Compile Include="Assets\Src\system\SO_ChannelDefaut.cs" />
+    <Compile Include="Assets\Src\system\R_Int.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -345,6 +373,12 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.2\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.0b14\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.0b14\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.0b14\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

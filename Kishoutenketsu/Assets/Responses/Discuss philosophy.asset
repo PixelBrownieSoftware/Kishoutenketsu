@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
   m_Name: Discuss philosophy
   m_EditorClassIdentifier: 
-  checkEncounters: 0
+  qualify_disqualify: 1
   encounterReq: []
-  reactions:
+  reactionsList:
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They seem to take an interest in your ideas.
+    qualify_disqualify: 1
+    responseDialogue: <AN> seems to take an interest in your ideas.
     traitsChange:
       nasty_nice: 0.122
       introv_extrov: -0.096
@@ -30,9 +30,10 @@ MonoBehaviour:
       inverseVal: 0
       trait: 0
     weight: -0.238
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They couldn't understand what you were saying.
+    qualify_disqualify: 1
+    responseDialogue: <AN> couldn't understand what you were saying.
     traitsChange:
       nasty_nice: 0
       introv_extrov: -0.152
@@ -42,12 +43,13 @@ MonoBehaviour:
       inverseVal: 1
       trait: 1
     Val2:
-      inverseVal: 1
-      trait: 4
-    weight: -0.65
+      inverseVal: 0
+      trait: 5
+    weight: -0.306
+    interests: []
   - encounterReq: []
-    requireEncounter: 0
-    responseDialogue: They did not want to listen to your ideas.
+    qualify_disqualify: 1
+    responseDialogue: <AN> did not want to listen to your ideas.
     traitsChange:
       nasty_nice: -0.106
       introv_extrov: -0.048
@@ -60,3 +62,57 @@ MonoBehaviour:
       inverseVal: 1
       trait: 6
     weight: -0.298
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> told you about a book that <APr2> were working on that
+      expressed your ideas.
+    traitsChange:
+      nasty_nice: 0.168
+      introv_extrov: -0.08
+      serious_funny: -0.052
+      headonic_asethetic: 0.124
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 0
+      trait: 4
+    weight: 0.441
+    interests:
+    - {fileID: 11400000, guid: a0fa5face54d76b43924f09de3c76e3f, type: 2}
+    - {fileID: 11400000, guid: 14834c90f89b5ec4d86f4116bd3d9cb2, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> decided to talk about the shoes <APr2> bought.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: -0.136
+      serious_funny: -0.15
+      headonic_asethetic: -0.063
+    Val1:
+      inverseVal: 1
+      trait: 3
+    Val2:
+      inverseVal: 1
+      trait: 5
+    weight: -0.359
+    interests:
+    - {fileID: 11400000, guid: 97c76b3eb4909804299afc7b64fdf148, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> took notes of your talk.
+    traitsChange:
+      nasty_nice: 0.068
+      introv_extrov: -0.204
+      serious_funny: -0.136
+      headonic_asethetic: 0.087
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 1
+      trait: 5
+    weight: 0.233
+    interests:
+    - {fileID: 11400000, guid: 14834c90f89b5ec4d86f4116bd3d9cb2, type: 2}

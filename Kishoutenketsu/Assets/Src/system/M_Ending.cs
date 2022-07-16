@@ -8,13 +8,13 @@ public class M_Ending : MonoBehaviour
     public S_Globals global;
     public CH_Func disableText;
     public CH_Func disableButton;
-    public CH_Func disablMenu;
+    public CH_Boolean disablMenu;
     public CH_Func onLoadScene;
 
     public void OnSceneLoad() {
         disableText.RaiseEvent();
         disableButton.RaiseEvent();
-        disablMenu.RaiseEvent();
+        disablMenu.RaiseEvent(false);
     }
 
     private void OnDisable()

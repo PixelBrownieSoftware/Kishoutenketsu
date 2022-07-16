@@ -12,23 +12,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
   m_Name: Dance
   m_EditorClassIdentifier: 
-  checkEncounters: 0
-  encounterReq: []
-  reactions:
-  - responseDialogue: The character danced with you fondly.
+  checkEncounters: 1
+  encounterReq:
+  - {fileID: 11400000, guid: cfe54811c8acd9a4cbb3d0c71ef679cf, type: 2}
+  - {fileID: 11400000, guid: 8eed049c5b88cfc4e88ee5e92b1f92fe, type: 2}
+  - {fileID: 11400000, guid: ce80cb97254a1894ead84b4151d8f550, type: 2}
+  - {fileID: 11400000, guid: a559d9259f8044b429b9c390f0be10cc, type: 2}
+  - {fileID: 11400000, guid: dd91546fe7a03044a8a903da38c9b6b6, type: 2}
+  - {fileID: 11400000, guid: caddd8c71c85dee4c97700e3e46c8b5a, type: 2}
+  - {fileID: 11400000, guid: 97c4b8aeebc5dee448f245c00641dc7a, type: 2}
+  - {fileID: 11400000, guid: a08012da3637c8d43aa42f74869241bb, type: 2}
+  - {fileID: 11400000, guid: 6ef383cb58911ee41bc6e115e2f24c95, type: 2}
+  reactionsList:
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: <AN> danced with you fondly.
     traitsChange:
       nasty_nice: 0.144
       introv_extrov: 0.105
       serious_funny: 0
       headonic_asethetic: 0
     Val1:
-      inverseVal: 0
+      inverseVal: 1
       trait: 1
     Val2:
       inverseVal: 0
-      trait: 5
-    weight: 0.149
-  - responseDialogue: The character walked away with an uncomfortable expression.
+      trait: 4
+    weight: 0.433
+    interests: []
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: <AN> walked away with an uncomfortable expression.
     traitsChange:
       nasty_nice: 0
       introv_extrov: 0
@@ -41,7 +55,10 @@ MonoBehaviour:
       inverseVal: 0
       trait: 4
     weight: -0.432
-  - responseDialogue: The character stuck their tounge at you
+    interests: []
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: <AN> stuck <APrP> tounge at you
     traitsChange:
       nasty_nice: 0
       introv_extrov: 0
@@ -54,7 +71,10 @@ MonoBehaviour:
       inverseVal: 1
       trait: 6
     weight: -0.251
-  - responseDialogue: The character furiously danced with you
+    interests: []
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: <AN> furiously danced with you
     traitsChange:
       nasty_nice: 0
       introv_extrov: 0
@@ -67,3 +87,40 @@ MonoBehaviour:
       inverseVal: 0
       trait: 5
     weight: -0.254
+    interests: []
+  - encounterReq:
+    - {fileID: 11400000, guid: a19dd847ef6be234198f7f1a873d8f72, type: 2}
+    requireEncounter: 0
+    responseDialogue: You added to the enjoyment of <AN> 's dance.
+    traitsChange:
+      nasty_nice: 0.24
+      introv_extrov: 0.129
+      serious_funny: 0
+      headonic_asethetic: 0.18
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 0
+      trait: 0
+    weight: -0.494
+    interests:
+    - {fileID: 11400000, guid: fd55b36e05160f74d8cf216c28e8da96, type: 2}
+  - encounterReq:
+    - {fileID: 11400000, guid: a19dd847ef6be234198f7f1a873d8f72, type: 2}
+    requireEncounter: 0
+    responseDialogue: <AN> was not comfortable with you dancing with them.
+    traitsChange:
+      nasty_nice: -0.129
+      introv_extrov: 0.059
+      serious_funny: 0
+      headonic_asethetic: -0.129
+    Val1:
+      inverseVal: 1
+      trait: 4
+    Val2:
+      inverseVal: 1
+      trait: 0
+    weight: -0.537
+    interests:
+    - {fileID: 11400000, guid: fd55b36e05160f74d8cf216c28e8da96, type: 2}

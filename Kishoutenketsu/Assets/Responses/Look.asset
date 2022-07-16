@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd343e07082acda4caaf3b4d30d20468, type: 3}
   m_Name: Look
   m_EditorClassIdentifier: 
-  reactions:
-  - responseDialogue: The other person cheerily waved at you.
+  qualify_disqualify: 1
+  encounterReq: []
+  reactionsList:
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> cheerily waved at you.
     traitsChange:
       nasty_nice: 0.2
       introv_extrov: 0.1
@@ -26,7 +30,10 @@ MonoBehaviour:
       inverseVal: 0
       trait: 1
     weight: -0.507
-  - responseDialogue: The other person ignored you.
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> ignored you.
     traitsChange:
       nasty_nice: 0
       introv_extrov: 0
@@ -39,7 +46,10 @@ MonoBehaviour:
       inverseVal: 0
       trait: 1
     weight: 0.082
-  - responseDialogue: The other person did not seem to like that.
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> did not seem to like that.
     traitsChange:
       nasty_nice: -0.12
       introv_extrov: 0.09
@@ -52,3 +62,98 @@ MonoBehaviour:
       inverseVal: 1
       trait: 1
     weight: -0.12
+    interests: []
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> felt an immense appreciation for you looking at <APr1>
+      clothing.
+    traitsChange:
+      nasty_nice: 0.237
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0.18
+    Val1:
+      inverseVal: 1
+      trait: 3
+    Val2:
+      inverseVal: 0
+      trait: 4
+    weight: 0.301
+    interests:
+    - {fileID: 11400000, guid: 97c76b3eb4909804299afc7b64fdf148, type: 2}
+  - encounterReq: []
+    qualify_disqualify: 1
+    responseDialogue: <AN> started talking about how <APr2> need to do some exercise
+      today.
+    traitsChange:
+      nasty_nice: 0.14
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0.148
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 0
+      trait: 1
+    weight: 0.485
+    interests:
+    - {fileID: 11400000, guid: 95dbfab43c41bd74087a269999a9c52e, type: 2}
+  - encounterReq:
+    - {fileID: 11400000, guid: d34fe07a2c615674fb016617ba8e1e36, type: 2}
+    - {fileID: 11400000, guid: 4d746cf8ccddfe042ba19f3d11902cd2, type: 2}
+    - {fileID: 11400000, guid: 6fe4bd876d720644f96573c6ffdd5421, type: 2}
+    qualify_disqualify: 1
+    responseDialogue: <AN> looked somewhat uncomfortably at you.
+    traitsChange:
+      nasty_nice: -0.103
+      introv_extrov: -0.109
+      serious_funny: 0
+      headonic_asethetic: -0.082
+    Val1:
+      inverseVal: 0
+      trait: 5
+    Val2:
+      inverseVal: 1
+      trait: 1
+    weight: 0.389
+    interests: []
+  - encounterReq:
+    - {fileID: 11400000, guid: d34fe07a2c615674fb016617ba8e1e36, type: 2}
+    - {fileID: 11400000, guid: 4d746cf8ccddfe042ba19f3d11902cd2, type: 2}
+    - {fileID: 11400000, guid: 6fe4bd876d720644f96573c6ffdd5421, type: 2}
+    qualify_disqualify: 1
+    responseDialogue: <AN> admired your gaze.
+    traitsChange:
+      nasty_nice: 0.086
+      introv_extrov: -0.039
+      serious_funny: 0
+      headonic_asethetic: 0.137
+    Val1:
+      inverseVal: 0
+      trait: 4
+    Val2:
+      inverseVal: 0
+      trait: 5
+    weight: -0.385
+    interests: []
+  - encounterReq:
+    - {fileID: 11400000, guid: d34fe07a2c615674fb016617ba8e1e36, type: 2}
+    - {fileID: 11400000, guid: 4d746cf8ccddfe042ba19f3d11902cd2, type: 2}
+    - {fileID: 11400000, guid: 6fe4bd876d720644f96573c6ffdd5421, type: 2}
+    qualify_disqualify: 1
+    responseDialogue: <AN> just continued eating <APr2> food.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 5
+    Val2:
+      inverseVal: 1
+      trait: 1
+    weight: 0.326
+    interests:
+    - {fileID: 11400000, guid: e1d513232cfc7e74287b08fb5b4eae8d, type: 2}

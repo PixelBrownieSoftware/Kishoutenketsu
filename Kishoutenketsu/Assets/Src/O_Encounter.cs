@@ -23,7 +23,8 @@ public class O_Encounter : ScriptableObject
     public bool usePSF;
 
     public string description;
-    //public O_Option[] options;
+    public Sprite background;
+    public List<O_Interest> interestReq;
 
     [System.Serializable]
     public struct O_Option {

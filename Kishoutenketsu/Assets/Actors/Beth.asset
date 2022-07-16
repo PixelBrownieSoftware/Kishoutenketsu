@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   traits:
     nasty_nice: 0.36
-    introv_extrov: 0.3
+    introv_extrov: -0.44
     serious_funny: -0.27
     headonic_asethetic: 0.24
   perceivedOpinions:
@@ -25,3 +25,8 @@ MonoBehaviour:
       serious_funny: 0
       headonic_asethetic: 0
   male_female: 1
+  characterSprite: {fileID: -723002437, guid: 8f05e04854148ba4881a8b4822beb7bc, type: 3}
+  interests:
+  - {fileID: 11400000, guid: a0fa5face54d76b43924f09de3c76e3f, type: 2}
+  - {fileID: 11400000, guid: 95dbfab43c41bd74087a269999a9c52e, type: 2}
+  - {fileID: 11400000, guid: 8dfc8279f8bdcda489ae38dc6052334e, type: 2}

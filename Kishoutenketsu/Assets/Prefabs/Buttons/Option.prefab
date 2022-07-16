@@ -20,9 +20,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3893647517881276858, guid: 6d2314ff533bc2640a2801b509210e34, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a7a02bfaf4e3ece4a956aeb81ecc12b7, type: 2}
+    - target: {fileID: 3893647517881276858, guid: 6d2314ff533bc2640a2801b509210e34, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2094408415151160706, guid: a7a02bfaf4e3ece4a956aeb81ecc12b7, type: 2}
     - target: {fileID: 4045032460402444377, guid: 6d2314ff533bc2640a2801b509210e34, type: 3}
       propertyPath: m_Name
-      value: Option Variant
+      value: Option
       objectReference: {fileID: 0}
     - target: {fileID: 4045032460402444378, guid: 6d2314ff533bc2640a2801b509210e34, type: 3}
       propertyPath: m_Pivot.x

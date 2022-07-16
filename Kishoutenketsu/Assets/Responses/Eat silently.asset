@@ -16,10 +16,11 @@ MonoBehaviour:
   encounterReq:
   - {fileID: 11400000, guid: 6fe4bd876d720644f96573c6ffdd5421, type: 2}
   - {fileID: 11400000, guid: d34fe07a2c615674fb016617ba8e1e36, type: 2}
-  reactions:
+  - {fileID: 11400000, guid: 4d746cf8ccddfe042ba19f3d11902cd2, type: 2}
+  reactionsList:
   - encounterReq: []
     requireEncounter: 0
-    responseDialogue: (AN) ate (APr2) food quietly as well.
+    responseDialogue: <AN> ate <APr2> food quietly as well.
     traitsChange:
       nasty_nice: 0
       introv_extrov: -0.106
@@ -32,9 +33,10 @@ MonoBehaviour:
       inverseVal: 0
       trait: 5
     weight: -0.478
+    interests: []
   - encounterReq: []
     requireEncounter: 0
-    responseDialogue: (AN) giggled as they watched you eat your food.
+    responseDialogue: <AN> giggled as <APr2> watched you eat your food.
     traitsChange:
       nasty_nice: 0.044
       introv_extrov: -0.032
@@ -47,9 +49,10 @@ MonoBehaviour:
       inverseVal: 0
       trait: 6
     weight: -0.546
+    interests: []
   - encounterReq: []
     requireEncounter: 0
-    responseDialogue: (AN) looked somewhat dissapointed that you didn't say a word.
+    responseDialogue: <AN> looked somewhat dissapointed that you didn't say a word.
     traitsChange:
       nasty_nice: -0.028
       introv_extrov: -0.098
@@ -62,9 +65,10 @@ MonoBehaviour:
       inverseVal: 1
       trait: 5
     weight: -0.302
+    interests: []
   - encounterReq: []
     requireEncounter: 0
-    responseDialogue: (AN) playfully sniggered at you as you ate your food.
+    responseDialogue: <AN> playfully sniggered at you as you ate your food.
     traitsChange:
       nasty_nice: 0.1
       introv_extrov: -0.156
@@ -77,3 +81,22 @@ MonoBehaviour:
       inverseVal: 0
       trait: 6
     weight: -0.322
+    interests: []
+  - encounterReq: []
+    requireEncounter: 0
+    responseDialogue: <AN> joyfully ate <APr2> their strawberries without paying
+      much attention to you.
+    traitsChange:
+      nasty_nice: 0
+      introv_extrov: 0
+      serious_funny: 0
+      headonic_asethetic: 0
+    Val1:
+      inverseVal: 1
+      trait: 1
+    Val2:
+      inverseVal: 1
+      trait: 5
+    weight: -0.322
+    interests:
+    - {fileID: 11400000, guid: 2cbcc47225f8f664f9927f732edd99b0, type: 2}

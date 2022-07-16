@@ -19,7 +19,7 @@ public static class S_BMaths
         }
         else
         {
-            result = Blend(input, -1.0f, change + 1.0f);
+            result = Blend(input, -1.0f, (change + 1.0f) * -1);
         }
 
         return result;
