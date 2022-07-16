@@ -1,1 +1,1 @@
-#Kishoutenketsu source code
+Kishoutenketsu source code
